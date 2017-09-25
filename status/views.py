@@ -16,8 +16,6 @@ from django.utils import timezone
 # Create your views here.
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    while request.method == "GET":
-        emergencey()
     return render(request, 'blog.html', {'posts': posts})
 
 def post_new(request):
@@ -50,3 +48,7 @@ def emergencey():
     print(response.text)
     #make a pop up tell the user tha the message has been sent
 
+def confirm(request):
+        if request.method == "GET":
+            emergencey()
+        return redirect(post_list)
