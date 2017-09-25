@@ -1,0 +1,18 @@
+<html>
+{% load static %}
+  <body>
+
+   <a href="{% url 'post_new' %}" class="top-menu"></a>
+{% for post in posts %}
+<div class= "div1">
+    <h2 class= "postname">{{ post.title }}</h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+    <p>published: {{ post.published_date }}</p>
+</div>
+<br></br>
+{% endfor %}
+  </body>
+</html>
+
+
+

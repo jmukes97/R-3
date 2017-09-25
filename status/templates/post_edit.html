@@ -1,0 +1,149 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Donate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+    
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header class="header-container">
+        <nav class="navbar nav-sky">
+            <div class="weather-wrapper nav-part">
+                <div id="weather"></div>
+            </div>
+            
+            <div class="logo-wrapper nav-part">
+                <div class="logo-holder  holder"><img src="{% static 'images/logo2.png' %}" width="80"></div>
+                <div class="name-holder holder"><h1>R³</h1></div>
+                
+                <div class="tagline-holder"><h2>Relief. Relive. Relife.</h2></div>   
+            </div>
+            
+            <div class="nav-right-wrapper nav-part">
+                <a href="#"><i class="fa fa-envelope fa-lg nav-icon" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-bell fa-lg nav-icon" aria-hidden="true"></i></a>
+                <a href="#"><img class="img-circle" src="{% static 'images/IMG_9253.JPG' %}" width="60"></a>
+            </div>
+        </nav>
+        
+        <nav class="navbar nav-main">
+          <ul class="nav navbar-nav">
+            <li><a class="selected" href="#">Home</a></li>
+            <li><a href="/posts/blog/">Profile</a></li>
+            <li><a href="/user/donate-objects/">Donate</a></li>
+            <li><a href="/user/request">Request</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <div class="content-container-home">
+        <div class="status-container">
+            <div class="status-pic status-holder">
+                <img class="img-circle" src="{% static 'images/IMG_9253.JPG' %}" width="90">
+            </div>
+
+            <div class="status-input status-holder">
+            {% block content %}
+                 <form method="POST" class="post-form">{% csrf_token %}
+                     <div class="form-part form-part-1">
+                     {{ form.Author }}
+                     {{ form.Title }} 
+                     </div>
+                     <div class="form-part form-part-2">
+                     {{ form.Text }}<button type="submit" class="save btn btn-default">Submit</button>
+                         
+                     </div>
+                     <div class="form-part form-part-3">
+                        
+                     </div>
+                     
+                     
+                    
+                        
+                    
+                </form>
+            {% endblock %}
+	       </div>
+
+            <div class="status-btns status-holder">   
+                <button class="btn-safe">Safe</button>
+                <button class="btn-unsafe">Unsafe</button>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 content-block content-block-latest">
+                    <h2>Latest News</h2>  
+                    
+                    <div class="news-stories">
+                        <div class="news">
+                            <div class="news-img news-img-1"></div>
+                            <div class="news-info">
+                                <h4>Heartbreak in Puerto Rico: We Don't Have Anything</h4>
+                                <p>Puerto Ricans are now returning home to face the devastation from Hurricane Maria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-stories">
+                        <div class="news">
+                            <div class="news-img news-img-2"></div>
+                            <div class="news-info">
+                                <h4>New 6.1 Maginitude Quake Rattles Mexio</h4>
+                                <p>A strong 6.1 maginitude struck Mexico Saturday killing at least 2 two people</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news-stories">
+                        <div class="news">
+                            <div class="news-img news-img-3"></div>
+                            <div class="news-info">
+                                <h4>Photos of the Destruction Hurricane Irma Left Behind</h4>
+                                <p>Millions still left picking up the pieces</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 content-block content-block-right content-block-quick">
+                    <h2>QuickLinks +</h2>
+                    <ul class="nav navbar-nav nav-quick">
+                        <li><a href="">Donate</a></li>
+                        <li><a href="">Volunteer</a></li>
+                        <li><a href="#">Give to a charity</a></li>
+                      </ul>
+                </div>
+                
+                <div class="col-md-6 content-block content-block-right content-block-top">
+                    <h2>Top Requested Donations</h2>
+                    <ol class="requested-list">
+                        <li>Money</li>
+                        <li>Shelter</li>
+                        <li>Clothes</li>
+                        <li>Food</li>
+                        <li>Feminie hygiene products</li>
+                    </ol>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+  <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

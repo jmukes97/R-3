@@ -1,0 +1,12 @@
+{% load static %}
+
+{% block content %}
+    <h1>Sign up</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+       <p> Name </p> </br> {{ form.name }} <br>
+       <p> Email</p> <br> {{ form.email }}<br>
+          <button type="submit" class="save btn btn-default">Sign up</button>
+    </form>
+{% endblock %}
+
+

@@ -1,0 +1,12 @@
+{% load static %}
+
+{% block content %}
+    <h1>Log in</h1>
+    <form method="POST" action="/posts/" class="post-form">
+       {% csrf_token %}
+       <p> Email</p> <br> {{ form.email }}<br>
+       <p> Password</p> <br> {{ form.password }} <br><br><br><br>
+        <button  type="submit" class="save btn btn-default">Sign up</button>
+    </form>
+{% endblock %}
+

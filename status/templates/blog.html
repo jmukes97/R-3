@@ -1,0 +1,140 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    
+    
+    
+    
+    
+   
+  <meta charset="utf-8">
+  <title>Donate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+    
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header class="header-container">
+        <nav class="navbar nav-sky">
+            <div class="weather-wrapper nav-part">
+                <div id="weather"></div>
+            </div>
+            
+            <div class="logo-wrapper nav-part">
+                <div class="logo-holder  holder"><img src="{% static 'images/logo2.png' %}" width="80"></div>
+                <div class="name-holder holder"><h1>R³</h1></div>
+                
+                <div class="tagline-holder"><h2>Relief. Relive. Relife.</h2></div>   
+            </div>
+            
+            <div class="nav-right-wrapper nav-part">
+                <a href="#"><i class="fa fa-envelope fa-lg nav-icon" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-bell fa-lg nav-icon" aria-hidden="true"></i></a>
+                <a href="#"><img class="img-circle" src="{% static 'images/IMG_9253.JPG' %}" width="60"></a>
+            </div>
+        </nav>
+        
+        <nav class="navbar nav-main">
+          <ul class="nav navbar-nav">
+            <li><a href="/posts/home">Home</a></li>
+            <li><a class="selected" href="#">Profile</a></li>
+            <li><a href="/user/donate-objects/">Donate</a></li>
+            <li><a href="/user/request">Request</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <div class="profile-content">
+        <div class="container-fluid">
+            <div class="row row-profile">
+                <div class="col-md-4 content-side">  
+                    <div class="side-header">
+                        <div class="pro-img-holder">
+                        <img class="img-circle img-profile"  src="{% static 'images/IMG_9253-lg.jpg' %}" width="150">
+                        </div>
+                    </div>
+                    <div class="side-body content-block">
+                        <h4><strong>Imani Tarpeh</strong></h4>
+                        <p><i>Last updated 2 days ago</i></p>
+                        <p>
+                            Detroit, MI<br>
+                            tarpeh@gmail.com<br>
+                            313-599-9355<br>
+                        </p>
+
+                       <button method="get" type="button" id="panic-btn" class="btn btn-danger">Emergency</button>
+                    </div>
+                    
+                    <div class="profile-map">
+                        <div id="map"><img src="https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyAxH2quCWkF6dfJ1TmPLmb67nfUW003yjs" width="330"></div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="content-block content-posts">
+                        <div class="post-img post-info">
+                            <img class="img-circle" src="{% static 'images/IMG_9253.JPG' %}" width="40">
+                        </div>
+                        <div class="post-hd post-info">
+                            <h6>You posted 2 days ago</h6>
+                        </div>
+                        <div class="post-desc">
+                            
+  
+
+                <a href="/posts/home" class="top-menu"></a>
+{% for post in posts %}
+<div class="div1">
+    <h2 class= "postname">{{ post.title }}</h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+    <p>published: {{ post.published_date }}</p>
+</div>
+<br>
+{% endfor %}
+
+                        </div>                      
+                        
+                    </div>
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="content-block content-posts">
+                        <div class="post-img post-info">
+                            <img class="img-circle" src="{% static 'images/1980_FL_John_Doe.jpg' %}" width="40">
+                        </div>
+                        <div class="post-hd post-info">
+                            <h6>John Smith posted to your wall 5 days ago</h6>
+                        </div>
+                        <div class="post-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in vestibulum ante. Praesent non justo ut ipsum feugiat tincidunt 
+quis non erat. Etiam at elit eget mauris mattis sodales sit amet ut nisi. Donec pharetra fermentum lectus, aliquet vehicula lorem 
+sollicitudin vitae. Nam aliquam felis massa, id feugiat quam accumsan at. Orci varius natoque penatibus et magnis dis parturient 
+montes, nascetur ridiculus mus. Maecenas accumsan rhoncus purus ac consectetur. In hac habitasse platea dictumst. 
+Suspendisse potenti. </p>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    
+    </div>
+  <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

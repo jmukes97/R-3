@@ -1,0 +1,463 @@
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+    background-color: #F7F7F7;
+    
+}
+body, html
+{
+    height: 100%;
+}
+
+.nav-right-wrapper
+{
+    position: absolute;
+    right: 0;
+    top: 35%;
+    padding: 0 30px;
+}
+.nav-right-wrapper a
+{
+   margin-left: 30px; 
+}
+.nav-sky
+{
+    height: 215px;
+    background-image: url(../images/sky-header.jpg);
+    position: relative;
+}
+.nav-sky a
+{
+    color: #fff;
+}
+.nav-part
+{
+    display: inline-block;
+    color: #fff;
+}
+.logo-wrapper
+{
+    padding: 20px 30px;
+    position: absolute;
+    top: 10%;
+    margin-left: 40%;
+}
+.logo-wrapper img
+{
+    margin-left: 35px;
+}
+.logo-wrapper h1
+{
+    text-align: center;
+}
+.logo-wrapper h2
+{
+    font-size: 1.3em;
+    text-align: center;
+}
+.holder
+{
+    display: inline-block;
+}
+
+.weather-wrapper
+{
+    position: absolute;
+    top: 20%;
+    padding: 20px 30px;
+}
+#weather
+{
+   
+    padding-top: 20px;
+    color: #fff;
+    font-size: 3em;
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+.nav-main
+{
+    padding-left: 20px;
+    margin: 0;
+    border: 0;
+    margin-top: -20px;
+    background-color: #fff;
+}
+.nav-main a
+{
+    margin-top: 10px;
+    margin-right: 20px;
+    color: #95989A; 
+}
+    
+.selected
+{
+   border-bottom: 3px solid #0CB8B6;
+} 
+
+.content-container
+{
+    padding: 20px 10%;
+    
+}
+
+/* Login */
+.bg
+{
+    background-image: url(../images/road-BG.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-container
+{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 400px;
+}
+.login-block 
+{
+    display: inline-block;
+}
+.login-block-left
+{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding: 20px;
+    height: 400px;
+    color: #fff;
+    background-image: url(../images/road-BG-color.png);
+}
+.login-block h1
+{
+    font-size: 1.5em;
+}
+.login-block h2
+{
+    font-size: 1.1em;
+}
+.login-left-info
+{
+    margin-left: -50px;
+    margin-top: 50px;
+    
+}
+.login-left-info ul
+{
+    font-size: 100;
+    list-style-type: none;
+}
+.login-block-right
+{
+    position: absolute;
+    top: 15%;
+    width: 50%;
+    padding: 20px;
+}
+.login-input
+{
+  
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+/* Home */
+.content-container-home
+{
+    padding: 20px;
+}
+
+.status-container
+{
+    background-color: #fff;
+    border-bottom: 3px solid #325C6A;
+    padding: 10px 20px;
+    height: 130px;
+    margin-bottom: 20px;
+}
+.status-holder{
+    display: inline-block;
+}
+.status-input
+{
+    background-color: #F7F7F7;
+    padding: 20px;
+    margin-left: 20px;
+    width: 70%;
+    height: 80px;
+}
+.status-btns
+{
+    margin-left: 20px;    
+}
+.status-btns button{
+    padding: 10px 20px;
+    border-radius: 10px;
+     
+}
+.btn-unsafe
+{
+    background-color: #0CB8B6;
+    color: #fff;
+    border: none; 
+}
+.btn-safe
+{
+    background-color: #fff;
+    border: 1px solid #0CB8B6;
+    color: #0CB8B6;
+}
+
+.home-content
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.content-block
+{
+    background-color: #fff;
+}
+.content-block-latest
+{
+    height: 500px;
+}
+.content-block-right
+{
+    margin-left: 20px;
+}
+.content-block-quick
+{
+    background-color: #ec625f;
+    color: #fff;
+}
+.nav-quick a
+{
+    color: #fff;
+}
+
+.nav-quick a:hover
+{
+    color: #DD5C36;
+}
+
+.content-block-top
+{
+    margin-top: 20px;
+    height: 370px;
+    padding: 0 20px;
+    padding-right: 40px;
+}
+.requested-list
+{
+    margin-top: 20px;
+}
+.requested-list li
+{
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: gray;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+/* Profile */
+.row-profile
+{
+    margin-top: 20px;
+}
+.side-header
+{
+    height: 100px;
+    background-color: #0CB8B6;
+    position: relative;
+}
+.pro-img-holder
+{
+    position: absolute;
+    left: 32%;
+    top: 20px;
+}
+.side-body
+{
+
+    height: 280px;
+    padding: 10px;
+    text-align: center;
+}
+.side-body h4
+{
+    margin-top: 80px;
+}
+
+.profile-map
+{
+    margin: 20px 0;
+    height: 300px;
+
+}
+#map
+{
+    height: 100%;
+}
+
+.status-input-pro
+{
+    background-color: #F7F7F7;
+    padding: 20px;
+    margin-left: 20px;
+    width: 60%;
+    height: 80px;
+}
+.content-posts
+{
+   
+    padding: 10px;
+}
+.post-info
+{
+    display: inline-block;
+}
+.post-hd
+{
+    margin-left: 10px;
+}
+.post-desc
+{
+    margin-top: 10px;
+}
+
+
+
+/* Donate & Request*/
+.content-head h2
+{
+    color: #325C6A;
+    text-align: center;
+}
+.content-head p
+{
+    color: #95989A;
+    text-align: center;
+}
+
+.categories
+{
+    margin-top: 40px;
+}
+.category
+{
+    background-color: white;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    padding: 40px;
+    height: 200px;
+    border: 1px solid #0CB8B6;
+    color: #0CB8B6;
+}
+.cat-img
+{
+    height: 100px;
+    background: no-repeat center;
+}
+.cat-hd
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.category-mn
+{
+    border: 1px solid #1DAA49;
+    animation-duration: 4s;
+}
+.cat-img-mn
+{
+    background-image: url(../images/money-icon.png); 
+}
+.cat-hd-mn
+{
+    color: #1DAA49;
+}
+.category-vl
+{
+    border: 1px solid #E28D2B;
+}
+.cat-img-vl
+{
+    background-image: url(../images/volunteer-icon.png); 
+}
+.cat-hd-vl
+{
+    color: #E28D2B;
+}
+.cat-img-fd
+{
+     background-image: url(../images/food-icon.png); 
+}
+.cat-img-cl
+{
+     background-image: url(../images/clothes-icon.png); 
+}
+.cat-img-to
+{
+     background-image: url(../images/toiletries-icon.png);
+}
+.cat-img-ms
+{
+     background-image: url(../images/misc-icon.png);
+}
+
+.categories a:hover .category
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.container-charities
+{
+    padding-left: 20%;
+}
+.donate-drop
+{
+    width: 87%;
+    margin-top: 20px;
+}
+.charity
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+.charity-holder
+{
+    padding: 20px;
+    border-bottom: 1px solid #325C6A;
+} 
+
+.donate-input-holder
+{
+    margin-top: 20px;
+}
+#btn-donate-cont
+{
+    margin-top: 10px;
+}
+
+.div1
+{
+    margin-bottom: 10px;
+}
+
+
+
