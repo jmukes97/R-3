@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^posts/', include("status.urls"), name = 'main'),
     url(r'^login/', include("login.urls"), name = 'blog',),
     url(r'^user/', include("loose.urls"), name = 'free'),
-    url(r'^', views.index, name='index') 
+    url(r'^$', views.index, name='index') 
 ]
