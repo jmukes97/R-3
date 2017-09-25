@@ -20,3 +20,5 @@ def newUser(request):
         form = signUp(request.POST)
     return render(request, 'signIn.html', {'form': form})
 
+def index(request):
+    return redirect(newUser)
